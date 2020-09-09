@@ -1,0 +1,260 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+black = ${xrdb:color0:#1d2021}
+darkred = ${xrdb:color1:#cc241d}
+darkgreen = ${xrdb:color2:#98971a}
+darkyellow = ${xrdb:color3:#d79921}
+darkblue = ${xrdb:color4:#458588}
+darkmagenta = ${xrdb:color5:#b16286}
+darkcyan = ${xrdb:color6:#689d6a}
+lightgray = ${xrdb:color7:#a89984}
+gray = ${xrdb:color8:#928374}
+red = ${xrdb:color9:#fb4934}
+green = ${xrdb:color10:#b8bb26}
+yellow = ${xrdb:color11:#fabd2f}
+blue = ${xrdb:color12:#83a598}
+magenta = ${xrdb:color13:#d3869b}
+cyan = ${xrdb:color14:#8ec07c}
+white = ${xrdb:color15:#ebdbb2}
+background = ${xrdb:background:#1d2021}
+foreground = ${xrdb:foreground:#ebdbb2}
+
+[bar/default]
+enable-ipc = true
+width = 100%
+height = 24
+fixed-center = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+line-size = 2
+line-color = {$xrdb:red}
+border-size = 0
+border-color = ${colors.white}
+padding-left = 0
+padding-right = 0
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = monospace:pixelsize=10;1
+font-1 = Inconsolata Nerd Font:size=8;1
+font-2 = Noto Color Emoji:scale=10:style=Regular;2
+font-3 = Symbola:pixelsize=9;1
+
+locale = nl_NL.UTF-8
+
+modules-left = bspwm xwindow
+modules-right = mpd volume xbacklight wlan battery date
+
+tray-position = right
+tray-padding = 0
+
+wm-restack = bspwm
+
+override-redirect = true
+
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+label-focused = %index%
+label-focused-foreground = ${colors.black}
+label-focused-background = ${colors.blue}
+label-focused-underline= ${colors.yellow}
+label-focused-padding = 1
+
+label-occupied = %index%
+label-occupied-underline = ${colors.blue}
+label-occupied-padding = 1
+
+label-urgent = %index%!
+label-urgent-background = ${colors.red}
+label-urgent-padding = 1
+
+label-empty = %index%
+label-empty-foreground = ${colors.lightgray}
+label-empty-padding = 1
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:45:...%
+format-foreground = ${colors.blue}
+
+[module/date]
+type = internal/date
+interval = 60
+
+date = "%a %d %b %Y"
+time = "%H:%M uur"
+label = %date% - %time%
+
+format-prefix = " "
+format-prefix-foreground = ${colors.gray}
+format-underline = ${colors.green}
+
+[module/mpd]
+type = internal/mpd
+host = 192.168.2.22
+
+format-online = <label-song>
+
+click-left = $TERMINAL -e ncmpcpp
+click-right = mpc -h 192.168.2.22 toggle
+
+label-song =  %artist% - %title%
+label-song-maxlen = 40
+label-song-ellipsis = true
+
+format-paused-foreground = ${colors.gray}
+format-underline = ${colors.blue}
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <bar>
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = ${colors.white}
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = ${colors.green}
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.red}
+
+[module/volume]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = 
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.gray}
+label-muted = stil
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.blue}
+bar-volume-foreground-1 = ${colors.blue}
+bar-volume-foreground-2 = ${colors.green}
+bar-volume-foreground-3 = ${colors.green}
+bar-volume-foreground-4 = ${colors.green}
+bar-volume-foreground-5 = ${colors.yellow}
+bar-volume-foreground-6 = ${colors.red}
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = =
+bar-volume-fill-font = 2
+bar-volume-empty = =
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.gray}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+
+;format-charging = Charging... <label-charging>
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = ${colors.darkyellow}
+
+;format-discharging = <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.gray}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.gray}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.gray}
+animation-charging-framerate = 500
+
+[module/wlan]
+type = internal/network
+interface = wlp58s0
+interval = 3.0
+
+format-connected = 直 <label-connected>
+format-connected-underline = ${colors.darkmagenta}
+label-connected = %essid%
+
+;format-disconnected =
+format-disconnected = <label-disconnected>
+format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+label-disconnected = 睊 Geen Wi-Fi
+label-disconnected-foreground = ${colors.gray}
+
+; <ramp-signal>
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.gray}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = ${colors.red}
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.darkmagenta}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-foreground = ${colors.gray}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
