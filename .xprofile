@@ -5,7 +5,7 @@ xrandr --output Virtual-1 --mode 1600x900
 $HOME/bin/setbg &
 
 # composit manager
-xcompmgr -c &
+xcompmgr -F &
 
 # simple X hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
