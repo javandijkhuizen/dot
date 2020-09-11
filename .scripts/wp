@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# view wallpapers in gallery
+find ~/wallpapers -type f | shuf | sxiv -
