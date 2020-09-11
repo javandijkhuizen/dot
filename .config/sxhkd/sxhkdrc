@@ -2,43 +2,25 @@
 # wm independent hotkeys
 #
 
-# Basic binds
+# terminal emulator
 super + Return
-    $TERMINAL
+    urxvt
 
+# program launcher
 super + @space
     dmenu_run
-
-# Programs
-super + m
-    $TERMINAL -e ncmpcpp
-
-super + b
-    chromium
-
-# Audiokeys
-XF86AudioMute
-    amixer sset Master toggle
-
-XF86Audio{Raise,Lower}Volume
-    amixer sset Master 5%{+,-}
-
-XF86Audio{Next,Prev}
-    mpc -h 192.168.2.22 {next,prev}
-
-XF86AudioPlay
-    mpc -h 192.168.2.22 toggle
-
-# Monitor
-XF86MonBrightnessUp
-    xbacklight -inc 10
-
-XF86MonBrightnessDown
-    xbacklight -dec 10
 
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
+
+# browser
+ctrl + alt + b
+    chromium
+
+# text editor
+ctrl + alt + t
+    geany
 
 #
 # bspwm hotkeys
@@ -53,16 +35,16 @@ super + {_,shift + }w
     bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
-super + alt + m
+super + m
     bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
 super + y
     bspc node newest.marked.local -n newest.!automatic.local
 
-# swap the current node and the biggest node
+# swap the current node and the biggest window
 super + g
-    bspc node -s biggest
+    bspc node -s biggest.window
 
 #
 # state/flags
@@ -88,9 +70,9 @@ super + {_,shift + }{h,j,k,l}
 super + {p,b,comma,period}
     bspc node -f @{parent,brother,first,second}
 
-# focus the next/previous node in the current desktop
+# focus the next/previous window in the current desktop
 super + {_,shift + }c
-    bspc node -f {next,prev}.local
+    bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
