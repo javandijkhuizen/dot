@@ -4,3 +4,4 @@ A repository for my config files.
 - bspwm
 - sxhkd
 - polybar
+- xorg
