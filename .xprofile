@@ -1,0 +1,17 @@
+# set display mode
+xrandr --output Virtual-1 --mode 1600x900
+
+# set wallpaper
+$HOME/bin/setbg &
+
+# composit manager
+xcompmgr -c &
+
+# simple X hotkey daemon
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# polybar
+$HOME/.config/polybar/launch.sh &
+
+# general settings
+export TERMINAL="urxvt"
