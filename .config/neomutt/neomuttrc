@@ -1,0 +1,6 @@
+# e-mailaccount
+source ~/.config/neomutt/accounts/default
+
+# general settings
+source ~/.config/neomutt/settings
+source ~/.config/neomutt/colors

@@ -1,0 +1,33 @@
+# editor
+set editor=$EDITOR
+
+# mailcap
+set mailcap_path = ~/.config/neomutt/mailcap
+
+# visible mailboxes
+set spoolfile = +INBOX
+set record = +Sent
+set trash = +Trash
+set postponed = +Drafts
+mailboxes =INBOX =Sent =Trash =Drafts =Spam
+
+# view
+set sort = reverse-date-received
+auto_view text/html
+
+# cache
+set header_cache = ~/.cache/mutt/headers
+set message_cachedir = ~/.cache/mutt/bodies
+
+# sidebar
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+bind index,pager \CP sidebar-prev          # Ctrl-Shift-P - Previous Mailbox
+bind index,pager \CN sidebar-next          # Ctrl-Shift-N - Next Mailbox
+bind index,pager \CO sidebar-open          # Ctrl-Shift-O - Open Highlighted Mailbox
+set sidebar_visible                        # Make the Sidebar visible by default
+bind index,pager B sidebar-toggle-visible  # Use 'B' to switch the Sidebar on and off
+set sidebar_width = 25                     # Plenty of space
+set sidebar_divider_char = '│'             # Pretty line-drawing character
+

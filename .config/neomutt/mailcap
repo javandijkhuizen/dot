@@ -1,0 +1,9 @@
+# html
+text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -collapse_br_tags -dump %s; nametemplate=%s.html; copiousoutput
+
+# pdf
+application/pdf; pdftotext -layout %s -; copiousoutput;
+
+# images
+image/png; /usr/bin/sxiv %s
+image/jpeg; /usr/bin/sxiv %s
