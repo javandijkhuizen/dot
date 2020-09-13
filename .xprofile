@@ -10,8 +10,6 @@ xcompmgr -F &
 # simple X hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-# polybar
-$HOME/.config/polybar/launch.sh &
-
 # general settings
 export TERMINAL="urxvt"
+export EDITOR="vim"
