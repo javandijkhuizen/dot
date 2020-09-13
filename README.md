@@ -6,3 +6,5 @@ A repository for my config files.
 - polybar
 - xorg
 - vim
+- neomutt
+
