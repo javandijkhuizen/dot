@@ -4,7 +4,7 @@ URxvt.scrollBar: false
 
 ! transparency
 URxvt.depth: 32
-URxvt.background: [65]#000000
+URxvt.background: [75]#000000
 
 ! extensions
 URxvt.perl-ext-common: default,resize-font,clipboard
