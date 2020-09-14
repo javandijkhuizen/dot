@@ -1,3 +1,10 @@
+# add ~/$HOME/bin to $PATH
+export PATH=$PATH:$HOME/bin
+
+# general settings
+export TERMINAL="urxvt"
+export EDITOR="vim"
+
 # set display mode
 xrandr --output Virtual-1 --mode 1600x900
 
@@ -9,7 +16,3 @@ xcompmgr -F &
 
 # simple X hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
-
-# general settings
-export TERMINAL="urxvt"
-export EDITOR="vim"
