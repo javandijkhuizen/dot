@@ -7,4 +7,4 @@ A repository for my config files.
 - xorg
 - vim
 - neomutt
-
+- ranger
