@@ -33,8 +33,8 @@ blue = ${xrdb:color12}
 magenta = ${xrdb:color13}
 cyan = ${xrdb:color14}
 white = ${xrdb:color15}
-background = ${xrdb:background:#002b36}
-foreground = ${xrdb:foreground:#93a1a1}
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
 
 [bar/default]
 enable-ipc = true
