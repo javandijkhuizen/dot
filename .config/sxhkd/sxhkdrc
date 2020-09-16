@@ -4,23 +4,15 @@
 
 # terminal emulator
 super + Return
-    urxvt
-
-# program launcher
-super + @space
-    dmenu_run
+    $TERMINAL
 
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
 
 # browser
-ctrl + alt + b
+super + b
     chromium
-
-# text editor
-ctrl + alt + t
-    geany
 
 #
 # bspwm hotkeys
