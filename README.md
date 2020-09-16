@@ -8,3 +8,4 @@ A repository for my config files.
 - vim
 - neomutt
 - ranger
+- fontconfig
