@@ -16,3 +16,5 @@ bspc config gapless_monocle      true
 bspc rule -a Chromium desktop='^2'
 bspc rule -a Geany desktop='^3'
 bspc rule -a Screenkey manage=off
+
+$HOME/.config/polybar/launch.sh
