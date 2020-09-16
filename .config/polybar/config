@@ -17,22 +17,22 @@
 ;==========================================================
 
 [colors]
-black = ${xrdb:color0:#002b36}
-darkred = ${xrdb:color1:#dc322f}
-darkgreen = ${xrdb:color2:#859900}
-darkyellow = ${xrdb:color3:#b58900}
-darkblue = ${xrdb:color4:#268bd2}
-darkmagenta = ${xrdb:color5:#6c71c4}
-darkcyan = ${xrdb:color6:#2aa198}
-lightgray = ${xrdb:color7:#fdf6e3}
-gray = ${xrdb:color8:#928374}
-red = ${xrdb:color9:#dc322f}
-green = ${xrdb:color10:#859900}
-yellow = ${xrdb:color11:#b58900}
-blue = ${xrdb:color12:#268bd2}
-magenta = ${xrdb:color13:#6c71c4}
-cyan = ${xrdb:color14:#2aa198}
-white = ${xrdb:color15:#93a1a1}
+black = ${xrdb:color0}
+darkred = ${xrdb:color1}
+darkgreen = ${xrdb:color2}
+darkyellow = ${xrdb:color3}
+darkblue = ${xrdb:color4}
+darkmagenta = ${xrdb:color5}
+darkcyan = ${xrdb:color6}
+lightgray = ${xrdb:color7}
+gray = ${xrdb:color8}
+red = ${xrdb:color9}
+green = ${xrdb:color10}
+yellow = ${xrdb:color11}
+blue = ${xrdb:color12}
+magenta = ${xrdb:color13}
+cyan = ${xrdb:color14}
+white = ${xrdb:color15}
 background = ${xrdb:background:#002b36}
 foreground = ${xrdb:foreground:#93a1a1}
 
@@ -52,7 +52,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = monospace:pixelsize=10;1
+font-0 = monospace:pixelsize=12;1
 font-1 = Inconsolata Nerd Font:size=8;1
 font-2 = Noto Color Emoji:scale=10:style=Regular;2
 font-3 = Symbola:pixelsize=9;1
