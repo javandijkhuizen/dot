@@ -1,7 +1,8 @@
 # load Xresources
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-# load Xprofile
+# load xprofile
+[ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 # start window manager
