@@ -17,6 +17,10 @@ super + {b,t,c,e,g,s,m}
 alt + shift + x
     betterlockscreen -l
 
+# Suspend
+alt + shift + q
+    $TERMINAL -e systemctl suspend
+
 # Audiokeys
 XF86AudioMute
     amixer sset Master toggle
