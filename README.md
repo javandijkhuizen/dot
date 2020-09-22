@@ -9,3 +9,4 @@ A repository for my config files.
 - neomutt
 - ranger
 - fontconfig
+- dunst
