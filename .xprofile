@@ -13,3 +13,6 @@ xcompmgr -F &
 
 # simple X hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
+
+# dunst server
+dunst &
