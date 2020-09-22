@@ -60,7 +60,7 @@ font-3 = Liberation:pixelsize=9;1
 locale = nl_NL.UTF-8
 
 modules-left = bspwm xwindow
-modules-right = date
+modules-right = mpd volume xbacklight wlan battery date
 
 tray-position = right
 tray-padding = 0
@@ -113,12 +113,12 @@ format-underline = ${colors.green}
 
 [module/mpd]
 type = internal/mpd
-host = 192.168.2.22
+host = 192.168.2.14
 
 format-online = <label-song>
 
 click-left = $TERMINAL -e ncmpcpp
-click-right = mpc -h 192.168.2.22 toggle
+click-right = mpc -h 192.168.2.14 toggle
 
 label-song =  %artist% - %title%
 label-song-maxlen = 40
