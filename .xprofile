@@ -4,7 +4,7 @@ export PATH=$PATH:$HOME/bin
 # general settings
 export TERMINAL="st"
 export EDITOR="vim"
-export BROWSER="firefox"
+export BROWSER="brave"
 
 # set wallpaper
 $HOME/bin/setbg &
@@ -17,3 +17,6 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 # dunst server
 dunst &
+
+# mpDris2
+mpDris2 &
