@@ -10,3 +10,5 @@ A repository for my config files.
 - ranger
 - fontconfig
 - dunst
+- mpDris2
+- Snapcast
