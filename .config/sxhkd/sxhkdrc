@@ -11,15 +11,11 @@ super + @space
 
 # Programs
 super + {b,t,c,e,g,s,m}
-    {firefox,libreoffice --writer,libreoffice --calc,thunderbird,gimp,soundconverter,$TERMINAL -e ncmpcpp}
+    {$BROWSER,libreoffice --writer,libreoffice --calc,thunderbird,gimp,soundconverter,$TERMINAL -e ncmpcpp}
 
 # Lockscreen
-alt + shift + x
-    betterlockscreen -l
-
-# Suspend
-alt + shift + q
-    $TERMINAL -e systemctl suspend
+alt + shift + {x,s,q,r}
+    {betterlockscreen -l,prompt "Wilt u de computer pauzeren?" "$TERMINAL -e systemctl suspend",prompt "Wilt u de computer afsluiten?" "$TERMINAL -e shutdown now",prompt "Wilt u de laptop herstarten?" "$TERMINAL -e reboot"}
 
 # Audiokeys
 XF86AudioMute
