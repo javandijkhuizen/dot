@@ -60,7 +60,7 @@ font-3 = Liberation:pixelsize=9;1
 locale = nl_NL.UTF-8
 
 modules-left = bspwm xwindow
-modules-right = mpd volume xbacklight wlan battery date
+modules-right = mpd volume xbacklight wlan battery weather date
 
 tray-position = right
 tray-padding = 0
@@ -226,7 +226,7 @@ label-connected = %essid%
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-label-disconnected = 睊 Geen Wi-Fi
+label-disconnected = 睊verbinden...
 label-disconnected-foreground = ${colors.gray}
 
 ; <ramp-signal>
@@ -257,6 +257,16 @@ ramp-2 = 
 ramp-3 = 
 ramp-4 = 
 ramp-foreground = ${colors.gray}
+
+[module/weather]
+type = custom/script
+exec = weather
+label = "%output%"
+click-left = $BROWSER wttr.in/Leusden &
+interval = 1800
+
+format-prefix-foreground = ${colors.gray}
+format-underline = ${colors.cyan}
 
 [settings]
 screenchange-reload = true
