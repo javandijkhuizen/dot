@@ -11,4 +11,5 @@ A repository for my config files.
 - fontconfig
 - dunst
 - mpDris2
-- Snapcast
+- snapcast
+- zathura
