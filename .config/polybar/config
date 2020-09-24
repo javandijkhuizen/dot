@@ -96,7 +96,7 @@ label-empty-padding = 1
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:45:...%
+label = %title:0:35:...%
 format-foreground = ${colors.blue}
 
 [module/date]
@@ -115,14 +115,17 @@ format-underline = ${colors.green}
 type = internal/mpd
 host = 192.168.2.14
 
+# format-online = <label-song> <bar-progress>
 format-online = <label-song>
-
-click-left = $TERMINAL -e ncmpcpp
-click-right = mpc -h 192.168.2.14 toggle
 
 label-song =  %artist% - %title%
 label-song-maxlen = 40
 label-song-ellipsis = true
+
+bar-progress-width = 35
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
 
 format-paused-foreground = ${colors.gray}
 format-underline = ${colors.blue}
@@ -164,7 +167,7 @@ bar-volume-foreground-0 = ${colors.blue}
 bar-volume-foreground-1 = ${colors.blue}
 bar-volume-foreground-2 = ${colors.green}
 bar-volume-foreground-3 = ${colors.green}
-bar-volume-foreground-4 = ${colors.green}
+bar-volume-foreground-4 = ${colors.yellow}
 bar-volume-foreground-5 = ${colors.yellow}
 bar-volume-foreground-6 = ${colors.red}
 bar-volume-gradient = false
