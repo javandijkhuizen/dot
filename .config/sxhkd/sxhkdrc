@@ -10,8 +10,8 @@ super + @space
     dmenu_run -h 24
 
 # Programs
-super + {b,t,c,e,g,s,m}
-    {$BROWSER,libreoffice --writer,libreoffice --calc,thunderbird,gimp,soundconverter,$TERMINAL -e ncmpcpp}
+super + {b,e,g,m,p}
+    {$BROWSER,thunderbird,gimp,$TERMINAL -e ncmpcpp,~/bin/Plexamp-3.2.0.AppImage}
 
 # Lockscreen
 alt + shift + {x,s,q,r}
