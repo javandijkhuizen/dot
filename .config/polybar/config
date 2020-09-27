@@ -104,8 +104,8 @@ type = internal/date
 interval = 60
 
 date = "%a %d %b %Y"
-time = "%H:%M uur"
-label = %date% - %time%
+time = "%H:%M "
+label = %date% %time%
 
 format-prefix = " "
 format-prefix-foreground = ${colors.gray}
