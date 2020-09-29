@@ -17,24 +17,24 @@
 ;==========================================================
 
 [colors]
-black = ${xrdb:color0}
-darkred = ${xrdb:color1}
-darkgreen = ${xrdb:color2}
-darkyellow = ${xrdb:color3}
-darkblue = ${xrdb:color4}
-darkmagenta = ${xrdb:color5}
-darkcyan = ${xrdb:color6}
-lightgray = ${xrdb:color7}
-gray = ${xrdb:color8}
-red = ${xrdb:color9}
-green = ${xrdb:color10}
-yellow = ${xrdb:color11}
-blue = ${xrdb:color12}
-magenta = ${xrdb:color13}
-cyan = ${xrdb:color14}
-white = ${xrdb:color15}
-background = ${xrdb:background}
-foreground = ${xrdb:foreground}
+black = ${xrdb:color0:#1d1f21}
+darkred = ${xrdb:color1:#cc342b}
+darkgreen = ${xrdb:color2:#198844}
+darkyellow = ${xrdb:color3:#fba922}
+darkblue = ${xrdb:color4:#3971ed}
+darkmagenta = ${xrdb:color5:#a36ac7}
+darkcyan = ${xrdb:color6:#3971ed}
+lightgray = ${xrdb:color7:#c5c8c6}
+gray = ${xrdb:color8:#969896}
+red = ${xrdb:color9:#cc342b}
+green = ${xrdb:color10:#198844}
+yellow = ${xrdb:color11:#fba922}
+blue = ${xrdb:color12:#3971ed}
+magenta = ${xrdb:color13:#a36ac7}
+cyan = ${xrdb:color14:#3971ed}
+white = ${xrdb:color15:#ffffff}
+background = ${xrdb:background:#1d1f21}
+foreground = ${xrdb:foreground:#c5c8c6}
 
 [bar/default]
 enable-ipc = true
