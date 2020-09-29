@@ -11,7 +11,7 @@ super + @space
 
 # Programs
 super + {b,e,g,m,p}
-    {$BROWSER,thunderbird,gimp,$TERMINAL -e ncmpcpp,~/bin/Plexamp-3.2.0.AppImage}
+    {$BROWSER,$EMAIL,gimp,$TERMINAL -e ncmpcpp,~/bin/plexamp}
 
 # Lockscreen
 alt + shift + {x,s,q,r}

@@ -221,7 +221,7 @@ type = internal/network
 interface = wlp58s0
 interval = 3.0
 
-format-connected = 直 <label-connected>
+format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${colors.darkmagenta}
 label-connected = %essid%
 
@@ -229,7 +229,7 @@ label-connected = %essid%
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-label-disconnected = 睊verbinden...
+label-disconnected = 睊
 label-disconnected-foreground = ${colors.gray}
 
 ; <ramp-signal>
