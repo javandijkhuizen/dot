@@ -52,10 +52,10 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = JetBrainsMonoMedium Nerd Font:pixelsize=11;1
-font-1 = Inconsolata Nerd Font:size=9;1
+font-0 = LiterationMono Nerd Font:pixelsize=10;1
+font-1 = JetBrainsMonoMedium Nerd Font:size=9;1
 font-2 = Noto Color Emoji:scale=9:style=Regular;2
-font-3 = Liberation:pixelsize=9;1
+font-3 = Symbola:pixelsize=9;1
 
 locale = nl_NL.UTF-8
 
@@ -133,17 +133,11 @@ format-underline = ${colors.blue}
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <bar>
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = ${colors.white}
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = ${colors.green}
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.red}
+format-prefix = "ﯧ "
+format-underline = ${colors.red}
+format = <label>
+
+label = %percentage%%
 
 [module/volume]
 type = internal/alsa
@@ -172,11 +166,11 @@ bar-volume-foreground-5 = ${colors.yellow}
 bar-volume-foreground-6 = ${colors.red}
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 0
 bar-volume-fill = =
-bar-volume-fill-font = 2
+bar-volume-fill-font = 0
 bar-volume-empty = =
-bar-volume-empty-font = 2
+bar-volume-empty-font = 0
 bar-volume-empty-foreground = ${colors.gray}
 
 [module/battery]
