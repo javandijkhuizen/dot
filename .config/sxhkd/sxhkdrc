@@ -25,17 +25,17 @@ XF86Audio{Raise,Lower}Volume
     amixer sset Master 5%{+,-}
 
 XF86Audio{Next,Prev}
-    mpc -h 192.168.2.14 {next,prev}
+    playerctl {next,prev}
 
 XF86AudioPlay
-    mpc -h 192.168.2.14 toggle
+    playerctl play-pause
 
 # Monitor
 XF86MonBrightnessUp
-    xbacklight -inc 10
+    xbacklight -inc 5
 
 XF86MonBrightnessDown
-    xbacklight -dec 10
+    xbacklight -dec 5
 
 # make sxhkd reload its configuration files:
 super + Escape
