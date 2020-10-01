@@ -60,7 +60,7 @@ font-3 = Symbola:pixelsize=9;1
 locale = nl_NL.UTF-8
 
 modules-left = bspwm xwindow
-modules-right = mpd volume xbacklight wlan battery weather date
+modules-right = mpd volume pacman-packages xbacklight wlan battery weather date
 
 tray-position = right
 tray-padding = 0
@@ -264,6 +264,17 @@ interval = 1800
 
 format-prefix-foreground = ${colors.gray}
 format-underline = ${colors.cyan}
+
+[module/pacman-packages]
+type = custom/ipc
+interval = 1000
+hook-0 = sudo pacman -Sy
+hook-1 = sudo pacman -Qu | wc -l
+format-prefix = "  "
+initial = 2
+
+format-prefix-foreground = ${colors.gray}
+format-underline = ${colors.white}
 
 [settings]
 screenchange-reload = true
