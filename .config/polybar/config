@@ -266,12 +266,12 @@ format-prefix-foreground = ${colors.gray}
 format-underline = ${colors.cyan}
 
 [module/pacman-packages]
-type = custom/ipc
+type = custom/script
+;exec = pacman -Qu | wc -l
+exec = checkupdates | wc -l
 interval = 1000
-hook-0 = sudo pacman -Sy
-hook-1 = sudo pacman -Qu | wc -l
+label = %output%
 format-prefix = "  "
-initial = 2
 
 format-prefix-foreground = ${colors.gray}
 format-underline = ${colors.white}
