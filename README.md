@@ -13,3 +13,4 @@ A repository for my config files.
 - mpDris2
 - snapcast
 - zathura
+- calcurse

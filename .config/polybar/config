@@ -60,7 +60,7 @@ font-3 = Symbola:pixelsize=9;1
 locale = nl_NL.UTF-8
 
 modules-left = bspwm xwindow
-modules-right = mpd volume pacman-packages xbacklight wlan battery weather date
+modules-right = mpd volume imap pacman-packages xbacklight wlan battery weather date
 
 tray-position = right
 tray-padding = 0
@@ -267,14 +267,24 @@ format-underline = ${colors.cyan}
 
 [module/pacman-packages]
 type = custom/script
-;exec = pacman -Qu | wc -l
 exec = checkupdates | wc -l
+click-left = $TERMINAL -e sudo pacman -Syu &
 interval = 1000
 label = %output%
 format-prefix = "  "
 
 format-prefix-foreground = ${colors.gray}
 format-underline = ${colors.white}
+
+[module/imap]
+type = custom/script
+exec = imap
+click-left = thunderbird &
+interval = 60
+format-prefix = "  "
+
+format-prefix-foreground = ${colors.gray}
+format-underline = ${colors.green}
 
 [settings]
 screenchange-reload = true
