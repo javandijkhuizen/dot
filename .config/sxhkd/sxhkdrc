@@ -15,7 +15,7 @@ super + {b,e,g,m,p}
 
 # Lockscreen
 alt + shift + {x,s,q,r}
-    {betterlockscreen -l,prompt "Wilt u de computer pauzeren?" "$TERMINAL -e systemctl suspend",prompt "Wilt u de computer afsluiten?" "$TERMINAL -e shutdown now",prompt "Wilt u de laptop herstarten?" "$TERMINAL -e reboot"}
+    {betterlockscreen -l -t "Geef wachtwoord op ...",prompt "Wilt u de computer pauzeren?" "$TERMINAL -e systemctl suspend",prompt "Wilt u de computer afsluiten?" "$TERMINAL -e shutdown now",prompt "Wilt u de laptop herstarten?" "$TERMINAL -e reboot"}
 
 # Audiokeys
 XF86AudioMute
