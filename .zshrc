@@ -1,6 +1,6 @@
 # Enable colors and change prompt:
 autoload -U colors && colors
-setopt autocd.
+setopt autocd
 stty stop undef
 
 # History in cache directory:
