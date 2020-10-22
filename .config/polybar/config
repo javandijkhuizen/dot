@@ -219,14 +219,14 @@ interval = 3.0
 
 format-connected =  <label-connected>
 format-connected-underline = ${colors.darkmagenta}
-;label-connected = %essid%
-label-connected = %signal%%
+label-connected = %essid%
+;label-connected = %signal%%
 
 ;format-disconnected =
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-label-disconnected = 睊n/a
+label-disconnected = 睊 n/a
 label-disconnected-foreground = ${colors.gray}
 
 ; <ramp-signal>
@@ -243,7 +243,7 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = ${colors.red}
+format-underline = ${colors.yellow}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 

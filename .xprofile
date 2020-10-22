@@ -1,13 +1,15 @@
 # add ~/$HOME/bin to $PATH
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin/statusbar
 
 # general settings
 export TERMINAL="st"
 export EDITOR="vim"
 export BROWSER="brave"
+export EMAIL="thunderbird"
 
 # set wallpaper
-$HOME/bin/setbg &
+setbg &
 
 # composit manager
 xcompmgr -F &

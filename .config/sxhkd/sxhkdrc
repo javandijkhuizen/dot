@@ -11,7 +11,10 @@ super + @space
 
 # Programs
 super + {b,e,g,m,p}
-    {$BROWSER,$EMAIL,gimp,$TERMINAL -e ncmpcpp,~/bin/plexamp}
+    {$BROWSER,$EMAIL,gimp,$TERMINAL -e ncmpcpp,plexamp}
+
+super + shift + {c,w}
+    {libreoffice --calc,libreoffice --writer}
 
 # Lockscreen
 alt + shift + {x,s,q,r}
