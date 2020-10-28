@@ -14,3 +14,4 @@ A repository for my config files.
 - snapcast
 - zathura
 - calcurse
+- test
