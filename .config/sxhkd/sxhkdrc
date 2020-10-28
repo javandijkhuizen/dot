@@ -18,6 +18,8 @@ super + e
 	$EMAIL
 super + m
 	$TERMINAL -e ncmpcpp
+super + a
+	plexamp
 super + shift + e
 	libreoffice --calc
 super + shift + w
@@ -25,11 +27,11 @@ super + shift + w
 
 # Additional binds
 super + shift + q
-	prompt "Wilt u de computer afsluiten?" "sudo -A shutdown -h now"
+	prompt "Wilt u de computer afsluiten?" "shutdown -h now"
 super + shift + r
-	prompt "Wilt u de computer herstarten?" "sudo -A reboot"
+	prompt "Wilt u de computer herstarten?" "reboot"
 super + shift + s
-	prompt 'Wilt u de computer pauzeren?' "sudo -A systemctl suspend"
+	prompt 'Wilt u de computer pauzeren?' "systemctl suspend"
 super + shift + x
 	betterlockscreen -l -t "Geef wachtwoord op ..."
 
