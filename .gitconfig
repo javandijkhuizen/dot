@@ -1,3 +1,7 @@
-[user]
-	email = alexander@vandijkhuizen.com
+[github]
+	user = javandijkhuizen
 	name = Alexander van Dijkhuizen
+	email = alexander@vandijkhuizen.com
+	token = abb2b5000fb2d80b407a595bf7528617d713b3f4 
+[core]
+	editor = vim
