@@ -12,7 +12,7 @@ export EMAIL="thunderbird"
 setbg &
 
 # composit manager
-xcompmgr -F &
+picom &
 
 # simple X hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
