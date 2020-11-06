@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if  pgrep picom &>/dev/null; then
+    notify-send "Picom wordt uitgezet"
+    pkill picom &
+else
+    notify-send "Picom wordt aangezet"
+	picom &
+fi
+
+exit 0
