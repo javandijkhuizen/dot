@@ -21,4 +21,5 @@ alias \
 	e="$EDITOR" \
 	v="$EDITOR" \
 	p="sudo pacman" \
-
+	yv="youtube-dl -4 -f bestvideo+bestaudio" \
+	ya="youtube-dl -4 --extract-audio --audio-format mp3 --audio-quality 0 -l" \
