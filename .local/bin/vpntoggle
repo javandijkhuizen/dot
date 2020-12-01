@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if  nordvpn status | grep -o Disconnected &>/dev/null; then
+    nordvpn connect &>/dev/null;
+else
+	nordvpn disconnect &>/dev/null;
+fi
+
+exit 0
