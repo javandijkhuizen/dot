@@ -24,6 +24,12 @@ super + shift + e
 	libreoffice --calc
 super + shift + w
 	libreoffice --writer 
+super + shift + f
+	pcmanfm
+super + shift + c
+	comptoggle
+super + shift + v
+	vpntoggle	
 
 # Additional binds
 super + shift + q
