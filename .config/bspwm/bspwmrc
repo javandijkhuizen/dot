@@ -16,9 +16,10 @@ bspc config gapless_monocle      true
 bspc rule -a Gimp desktop='^8' follow=on
 bspc rule -a Brave-browser desktop='^2' follow=on
 bspc rule -a Thunderbird desktop='^3' follow=on
+bspc rule -a Pcmanfm desktop='^6' follow=on
 bspc rule -a Soffice desktop='^7' follow=on
 bspc rule -a Zathura state=tiled
-bspc rule -a Plexamp state=floating rectangle=275x400+1325+500 manage=on
+bspc rule -a Plexamp state=floating rectangle=275x400+1405+650 manage=on
 bspc rule -a Screenkey manage=off
 
 $HOME/.config/polybar/launch.sh
