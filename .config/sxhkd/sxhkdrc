@@ -30,6 +30,8 @@ super + shift + c
 	comptoggle
 super + shift + v
 	vpntoggle	
+super + shift + b
+	dmenu-bookmarks	
 
 # Additional binds
 super + shift + q
@@ -70,7 +72,7 @@ super + shift + p
 
 # Changes to next/previous tracks
 super + {comma,period}
-	mpc -h 192.168.2.14 {prev,next}
+    playerctl {previous,next}
 
 # Restart track
 super + shift + less
