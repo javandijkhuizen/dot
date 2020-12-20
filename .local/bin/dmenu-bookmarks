@@ -1,0 +1,11 @@
+#! /bin/bash
+
+# This script fetches the bookmarks from a source file. It then
+# displays the list in dmenu. Once selected it sends it to your
+# browser
+
+# The source file conataining the bookmarks 
+FILE=~/.config/bookmarks/urls
+
+# Display the bookmarks and send selected bookmark to browser
+cat $FILE | sort | dmenu -l 10 | awk '{print $(NF)}' | xargs -I '{}' $BROWSER {}
