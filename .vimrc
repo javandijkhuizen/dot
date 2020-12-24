@@ -15,3 +15,7 @@ set clipboard=unnamedplus
 
 " set color mode
 set t_Co=256
+
+" powerline
+set laststatus=2
+set rtp+=/usr/share/powerline/bindings/vim

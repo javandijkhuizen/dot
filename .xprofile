@@ -11,8 +11,11 @@ export EMAIL="thunderbird"
 # set wallpaper
 setbg &
 
+# polkit
+lxpolkit &
+
 # composit manager
-picom &
+picom --experimental-backends &
 
 # simple X hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
