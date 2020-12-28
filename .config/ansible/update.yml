@@ -1,0 +1,11 @@
+---
+
+- hosts: servers
+  become: yes
+  tasks:
+
+  - name: install updates (Debian)
+    apt: 
+      update_cache: yes
+      upgrade: 'yes'
+    when: ansible_distribution == 'Debian'
