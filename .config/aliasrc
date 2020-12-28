@@ -5,7 +5,8 @@ alias \
 	cp="cp -iv" \
 	mv="mv -iv" \
 	rm="rm -vI" \
-	mkd="mkdir -pv"
+	mkd="mkdir -pv" \
+	ucon="ansible-playbook --ask-become-pass ~/.config/ansible/update.yml"
 
 # Colorize commands
 alias \
