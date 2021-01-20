@@ -66,9 +66,9 @@ XF86AudioPlay
 
 # Audioplayer
 super + p
-	mpc -h 192.168.2.14 toggle
+	mpc toggle
 super + shift + p
-	mpc -h 192.168.2.14 pause; pauseallmpv
+	mpc pause; pauseallmpv
 
 # Changes to next/previous tracks
 super + {comma,period}
@@ -76,15 +76,15 @@ super + {comma,period}
 
 # Restart track
 super + shift + less
-	mpc -h 192.168.2.14 seek 0%
+	mpc seek 0%
 
 # Seek foward in song
 super + {_,shift +} bracketright
-	mpc -h 192.168.2.14 seek +{10,120}
+	mpc seek +{10,120}
 
 # Seek backward in song
 super + {_,shift +} bracketleft
-	mpc -h 192.168.2.14 seek -{10,120}
+	mpc seek -{10,120}
 
 # Increase volume
 super + {equal,plus}
