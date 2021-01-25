@@ -1,5 +1,5 @@
 # Required
-mpd_host = "192.168.2.7"
+mpd_host = "192.168.2.30"
 mpd_port = "6600"
 
 # General
