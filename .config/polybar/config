@@ -112,7 +112,7 @@ format-underline = ${colors.green}
 
 [module/mpd]
 type = internal/mpd
-host = localhost
+host = 192.168.2.7
 
 ;format-online = <label-song> <bar-progress>
 format-online = <label-song>
